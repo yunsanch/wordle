@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 ![wordlewalkthru.gif](https://github.com/yunsanch/wordle/blob/master/WorldleWalkthru.gif)
-<img src='https://submissions.us-east-1.linodeobjects.com/and102/p6SM_FiX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
