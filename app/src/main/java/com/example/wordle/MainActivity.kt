@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
 import android.view.View
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_UNSPECIFIED)
         wordToGuess = FourLetterWordList.FourLetterWordList.getRandomFourLetterWord()
 
         val Button = findViewById<Button>(R.id.GuessButton)
@@ -105,29 +107,16 @@ class MainActivity : AppCompatActivity() {
                         guessChecktres.visibility = View.INVISIBLE
 
                         btnReseter.visibility = View.INVISIBLE
+                        wordToGuess = FourLetterWordList.FourLetterWordList.getRandomFourLetterWord()
+                        WordtoguessTextview.text = wordToGuess
                         WordtoguessTextview.visibility = View.INVISIBLE
                         Button.setBackgroundColor(Color.BLUE)
+
                         Button.isClickable = true
                     }
 
                 }
             }
-
-//            if (counter >= 2 ) {
-//                btnReseter.visibility = View.VISIBLE
-//                btnReseter.setOnClickListener {
-//                    btnReseter.text = "Re-start"
-//                    btnReseter.setOnClickListener {
-//                        counter = 0
-//                        worduno.text = ""
-//                        worduno.visibility = View.INVISIBLE
-//
-//                        Button.isClickable = true
-//                    }
-//                }
-//
-//            }
-
 
         }
 
