@@ -2,6 +2,7 @@ package com.example.wordle
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.SpannableString
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         val wordtresCheck = findViewById<TextView>(R.id.word3checkTextView12)
         val WordtoguessTextview = findViewById<TextView>(R.id.WordToGuessTextview13)
         val simpleEditText = findViewById<EditText>(R.id.inputGuess)
-
+        val btnReseter = findViewById<Button>(R.id.btnPlayAgain)
 
         Button.setOnClickListener {
             it.hideKeyboard()
@@ -79,10 +80,57 @@ class MainActivity : AppCompatActivity() {
                 WordtoguessTextview.visibility = View.VISIBLE
                 Button.setBackgroundColor(Color.GRAY)
                 Button.isClickable = false
+
+                btnReseter.visibility = View.VISIBLE
+                btnReseter.setOnClickListener {
+                    it.hideKeyboard()
+                    btnReseter.text = "Re-Start"
+                    btnReseter.setOnClickListener {
+                        counter = 0
+                        simpleEditText.text.clear()
+
+                        worduno.visibility = View.INVISIBLE
+                        Guess1.visibility = View.INVISIBLE
+                        wordunocheck.visibility = View.INVISIBLE
+                        guessCheckuno.visibility = View.INVISIBLE
+
+                        worddos.visibility = View.INVISIBLE
+                        Guess2.visibility = View.INVISIBLE
+                        worddoscheck.visibility = View.INVISIBLE
+                        guessCheckdos.visibility = View.INVISIBLE
+
+                        wordtres.visibility = View.INVISIBLE
+                        Guess3.visibility = View.INVISIBLE
+                        wordtresCheck.visibility = View.INVISIBLE
+                        guessChecktres.visibility = View.INVISIBLE
+
+                        btnReseter.visibility = View.INVISIBLE
+                        WordtoguessTextview.visibility = View.INVISIBLE
+                        Button.setBackgroundColor(Color.BLUE)
+                        Button.isClickable = true
+                    }
+
+                }
             }
+
+//            if (counter >= 2 ) {
+//                btnReseter.visibility = View.VISIBLE
+//                btnReseter.setOnClickListener {
+//                    btnReseter.text = "Re-start"
+//                    btnReseter.setOnClickListener {
+//                        counter = 0
+//                        worduno.text = ""
+//                        worduno.visibility = View.INVISIBLE
+//
+//                        Button.isClickable = true
+//                    }
+//                }
+//
+//            }
 
 
         }
+
 
     }
     fun View.hideKeyboard() {

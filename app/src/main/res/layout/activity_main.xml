@@ -161,6 +161,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="@string/guess"
+        android:background="@color/blue"
         app:layout_constraintStart_toEndOf="@+id/guess_text_input_layout"
         app:layout_constraintTop_toTopOf="@+id/guess_text_input_layout" />
+
+    <Button
+        android:id="@+id/btnPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Want to try again?"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/WordToGuessTextview13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502" />
 </androidx.constraintlayout.widget.ConstraintLayout>
