@@ -138,6 +138,10 @@
         android:id="@+id/guess_text_input_layout"
         android:layout_width="304dp"
         android:layout_height="55dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="4"
+        app:counterTextAppearance="@color/blue"
+        app:counterOverflowTextAppearance="@color/black"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <EditText
